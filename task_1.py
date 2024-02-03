@@ -1,3 +1,11 @@
+def print_cook_book(cook_book):
+    for dish, ingredients in cook_book.items():
+        print(f"{dish}:")
+        for ingredient in ingredients:
+            print(f"  {ingredient}")
+        print()
+
+
 def read_recipe(file_path):
     cook_book = {}
 
@@ -34,8 +42,4 @@ def read_recipe(file_path):
 if __name__ == "__main__":
     cook_book = read_recipe("recipes.txt")
 
-    for dish, ingredients in cook_book.items():
-        print(f"{dish}:")
-        for ingredient in ingredients:
-            print(f"  {ingredient}")
-        print()
+    print_cook_book(cook_book)
